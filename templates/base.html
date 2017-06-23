@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Naija Today</title>
+    <title>Naija Linux</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,9 +24,10 @@
             <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">News</a></li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Admins</a></li>
           </ul>
         </div>
-      <a class="navbar-brand pull-sm-right m-r-0 hidden-xs-down" href="#">Naija Today</a>
+      <a class="navbar-brand pull-sm-right m-r-0 hidden-xs-down" href="#">Naija Geeks</a>
     </div>
 
     </nav>
@@ -35,57 +36,32 @@
     <hr />
     <div class="container p-t-2"> <!--main container-->
       <!-- show show -->
-      <div class="card bg-success">
-        <h2 class="card-header bg-success" style="text-align: center">Daily Events in Naija
-          <h5 style="text-align: center">News. Money. Gists. Videos. Blog.</h5>
-        </h2>
+      <div class="jumbotron bg-danger">
+        <h2 class="display-4" style="text-align: center">Nigeria Linux and Opensource Enthusiasts</h2>
+          <h5 style="text-align: center">Community of Naija Technology Guys and Girls</h5>
+
       </div>
-      <hr />
+
 
       <div class="row">   <!-- main rows -->
 
-        <div class="col-md-8" style="background-color: white;">
-          <div id="carouselExampleControls" class="carousel slide" data-interval="10000" data-ride="carousel">
-
-          <div class="carousel-inner" role="listbox">
-            {% include "finance/exchange_rate.html" %}
-            {% include "finance/commodity_prices.html" %}
-            {% include "agric/agric_products.html" %}
-
-            <div class="carousel-item">
-              <div class="card w-100 bg-danger" style="height: 270px;" >
-                <h5 class="card-header bg-danger" style="font-weight: bold;text-align: center">Weather</h5>
-                <h6 style="font-weight: bold;">  Lagos: 35 </h6>
-                <h6 style="font-weight: bold;">  PH: 35</h6>
-                <h6 style="font-weight: bold;">  kano: 35</h6>
-                <h6 style="font-weight: bold;">  Abuja: 35</h6>
-            </div>
+        <div class="col-md-8">
+          <div class="card " style="overflow-y:hidden;overflow-x:scroll">
+            <h2 class="card-header bg-success" style="font-weight: bold; text-align: center">Popular Open source Projects</h2>
+              <a href="https://www.openstack.org/" class="card-link">Openstack</a>
+              <a href="https://kubernetes.io/" class="card-link">Kubernetes</a>
           </div>
-          </div>
-
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-        <hr />
-
-          <div class="card ">
-            <h2 class="card-header bg-success" style="font-weight: bold; text-align: center">Gists</h2>
+          <hr />
+          <div class="card " >
+            <h2 class="card-header bg-success" style="font-weight: bold; text-align: center">Articles</h2>
           </div>
 
       </div>
 
-      <div class="col-md-4" style="background-color: green;">
-          {% block news_content %}
+      <div class="col-md-4">
+          {% block feeds_content %}
           {% endblock %}
           <hr />
-          {% include "clips/videos_list.html" %}
-
       </div>
 
       </div> <!-- main row -->
