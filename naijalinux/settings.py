@@ -40,6 +40,7 @@ INSTALLED_APPS = [
      'djcelery',
      'kombu.transport.django',
      'feeds.apps.FeedsConfig',
+    'openprojects.apps.OpenprojectsConfig'
 ]
 
 MIDDLEWARE = [
