@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'djcelery',
-     'kombu.transport.django',
-     'feeds.apps.FeedsConfig',
-    'openprojects.apps.OpenprojectsConfig'
+    'djcelery',
+    'kombu.transport.django',
+    'feeds.apps.FeedsConfig',
+    'openprojects.apps.OpenprojectsConfig',
+    'blogpost.apps.BlogpostsConfig'
 ]
 
 MIDDLEWARE = [
