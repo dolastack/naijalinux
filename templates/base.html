@@ -47,7 +47,10 @@
       <div class="row">   <!-- main rows -->
 
         <div class="col-md-8">
+          <div class="row">
 
+
+          <div class="col-md-6">
           <div class="card " style="overflow-y:hidden;overflow-x:scroll">
              <div class="card-block">
             <h3 class="card-header bg-success" style="font-weight: bold; text-align: center">Popular Open source Projects</h3>
@@ -55,9 +58,25 @@
               {% for entry in project_list %}
                 <a href="{{ entry.url }}" class="card-link">{{ entry.name }} </a>
               {% endfor %}
-
+          </div>
           </div>
         </div>
+
+        <div class="col-md-6">
+        <div class="card " style="overflow-y:hidden;overflow-x:scroll">
+           <div class="card-block">
+          <h3 class="card-header bg-success" style="font-weight: bold; text-align: center">Popular Linux Distros</h3>
+
+              <a href="https://kubernetes.io/" class="card-link">Centos</a>
+              <a href="https://kubernetes.io/" class="card-link">Fedora</a>
+              <a href="https://kubernetes.io/" class="card-link">Ubuntu</a>
+              <a href="https://kubernetes.io/" class="card-link">OpenSUSE</a>
+              <!--a href="https://kubernetes.io/" class="card-link">Gentoo</a-->
+        </div>
+        </div>
+      </div>
+      </div>
+
           <hr />
           <div class="card " >
             <h2 class="card-header bg-success" style="font-weight: bold; text-align: center">Articles</h2>
