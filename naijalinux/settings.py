@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'kombu.transport.django',
     'feeds.apps.FeedsConfig',
     'openprojects.apps.OpenprojectsConfig',
-    'blogpost.apps.BlogpostsConfig'
+    'blogposts.apps.BlogpostsConfig'
 ]
 
 MIDDLEWARE = [

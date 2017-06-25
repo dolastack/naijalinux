@@ -22,7 +22,7 @@ class ArticlesManager(models.Manager):
                     time_delta = datetime.datetime.now() - datetime.timedelta(days=value)
                 elif duration == "hours":
                     time_delta = datetime.datetime.now() - datetime.timedelta(hours=value)
-                return self.filter(publication_date__gte = time_delta).order_by("-publication_date")
+                return self.filter(publication_date__gte = time_delta)
 
 class Article(models.Model):
     feed = models.ForeignKey(Feed)
@@ -32,6 +32,9 @@ class Article(models.Model):
     publication_date = models.DateTimeField()
     article_id = models.CharField(max_length=200, primary_key=True)
     objects = ArticlesManager()
+
+    class Meta:
+        ordering = ('-publication_date',)
 
     def setID(self):
         idm = hashlib.sha1()
