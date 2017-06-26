@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '54.212.200.82', '54.203.113.77']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'kombu.transport.django',
     'feeds.apps.FeedsConfig',
     'openprojects.apps.OpenprojectsConfig',
-    'blogposts.apps.BlogpostsConfig'
+    'blogposts.apps.BlogpostsConfig',
+    'account',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
@@ -145,7 +147,12 @@ BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
-
-
 CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+
+
+
+from django.core.urlresolvers import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGIN_URL = reverse_lazy('login')
+LOGIN_URL = reverse_lazy('logout')
