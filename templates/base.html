@@ -25,9 +25,18 @@
             <li class="nav-item"><a class="nav-link" href="#">News</a></li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact Admins</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Log in</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
-          </ul>
+         </ul>
+         <!--ul class="nav navbar-nav  ml-auto">
+                {% if request.user.is_authenticated %}
+                  <li class="nav-item">Hello {{ request.user.name }}, <a href="{% url "logout" %}"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+                {% else %}
+                  <li class="nav-item pull-xs-right"><a class="nav-link" href="{% url "login" %}"><span class="glyphicon glyphicon-log-in"></span> Log in</a></li>
+                {% endif %}
+
+                <li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
+        </ul-->
+
+
         </div>
 
     </div>
