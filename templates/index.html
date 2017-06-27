@@ -32,7 +32,7 @@
                 <li class="nav-item"><a class="nav-link" href="{% url "logout" %}">Hello {{ request.user.username }}, Logout</a></li>
               {% else %}
                 <li class="nav-item pull-xs-right"><a class="nav-link" href="{% url "login" %}">Log in</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url "register" %}">Sign up</a></li>
               {% endif %}
           </ul>
 
