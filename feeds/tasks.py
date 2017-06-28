@@ -14,7 +14,7 @@ import pickle
 # Create your views here.
 
 
-redis = redis.StrictRedis(host='localhost', port=6379, db=9)
+redis = redis.StrictRedis(host='localhost', port=6379, db=8)
 
 # facebook api
 cfg = {
