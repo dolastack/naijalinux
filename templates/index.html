@@ -13,7 +13,7 @@
 
   <body >
     <!-- navbar starts-->
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+    <nav class="navbar  navbar-toggleable-md navbar-inverse bg-primary p-b-0">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,17 +25,17 @@
 
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
           </ul>
 
           <ul class="nav navbar-nav  ml-auto">
               {% if request.user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link" href="{% url "logout" %}">Hello {{ request.user.username }}, Logout</a></li>
               {% else %}
-                <li class="nav-item pull-xs-right"><a class="nav-link" href="{% url "login" %}">Log in</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url "login" %}">Log in</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url "register" %}">Sign up</a></li>
               {% endif %}
           </ul>
-
         </div>
     </div>
     </nav>
@@ -47,13 +47,11 @@
       <div class="jumbotron bg-danger">
         <h2 class="display-4" style="text-align: center">Nigeria Linux and Opensource Enthusiasts</h2>
           <h5 style="text-align: center">Community of Naija Technology Guys and Girls</h5>
-
       </div>
-
 
       <div class="row">   <!-- main rows -->
         <hr />
-        <div class="col-md-8">
+        <div class="col-md-8"> <!-- col-8 -->
 
           <div class="card ">
              <div class="card-block">
@@ -63,7 +61,7 @@
                 <h5 style="color: red;">To encourage use of Linux OS in Nigerian Universities</h5>
             </div>
         </div>
-
+        <hr />
           <div class="card " style="overflow-y:hidden;overflow-x:scroll">
              <div class="card-block">
                <h3 class="card-header bg-success" style="font-weight: bold; text-align: center">Popular Open source Projects</h3>
@@ -97,7 +95,7 @@
             {% include "blogposts/blog_display.html" %}
           </div>
 
-      </div>
+      </div> <!-- end col-8 -->
 
       <div class="col-md-4">
 
@@ -115,8 +113,11 @@
       </div>
 
       </div> <!-- main row -->
-
+      <footer>
+       <p>&copy; 2017 Company, Inc.</p>
+      </footer>
     </div> <!-- main container -->
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
