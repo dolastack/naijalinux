@@ -4,7 +4,7 @@
   <p class="date">
     Published {{ post.publish }} by {{ post.author }}
   </p>
-  <pre>{{ post.body|linebreaks }}</pre>
+  <pre>{{ post.body | safe }}</pre>
 
   {% with comments.count as total_comments %}
       <h2>{{ total_comments  }} comment{{ total_comments|pluralize}}</h2>
@@ -14,7 +14,7 @@
     <div class="comment">
       <p class="info">
         Comment {{ forloop.counter }} by {{ comment.name}} {{ comment.created }}
-        {{ comment.body|linebreaks}}
+        {{ comment.body | linebreaks }}
       </p>
     </div>
     {% empty %}
