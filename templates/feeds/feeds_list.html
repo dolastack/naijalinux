@@ -6,7 +6,7 @@
 <h4 class="card-header bg-success" style="font-weight: bold; text-align: center;">News</h4>
 
       {% for entry in rows %}
-        <h3>{{entry.title}}</h3>
+        <h3>{{entry.title | safe  }}</h3>
         <p>{{ entry.description | safe }}</p>
         <p>
           <a href="{{entry.url}}" target="_blank" class="btn btn-primary">Veiw Details</a>
