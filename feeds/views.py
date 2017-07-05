@@ -7,14 +7,16 @@ from django.views.decorators.cache import cache_page
 from django.conf import settings
 from openprojects.models import OpenSourceProject
 from blogposts.models import BlogPost
+from clips.models import YoutubeVideo
 
 # Create your views here.
 def index(request):
     display_list = Article.objects.articles_after(days=20)
     project_list = OpenSourceProject.objects.all()
     blogposts = BlogPost.objects.all()
+    videos = YoutubeVideo.objects.videos_after( days=30)
 
-    #context = {'rows':display_list}
+
     template = "feeds/feeds_list.html"
 
     paginator = Paginator(display_list, 10)
@@ -26,5 +28,6 @@ def index(request):
     except EmptyPage:
         rows = paginator.page(paginator.num_pages)
 
-    context = {'rows' : rows, 'project_list':project_list , 'blogposts':blogposts}
+    context = {'rows' : rows, 'project_list':project_list ,
+               'blogposts':blogposts, 'videos' : videos}
     return render(request, template, context )
