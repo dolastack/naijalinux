@@ -1,8 +1,9 @@
 {% for post in blogposts %}
+<div class="container">
   <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
   <p class="date">
     Published {{ post.publish }} by {{ post.author }}
   </p>
   <pre>{{ post.summary |safe }}</pre>
-
+</div>
 {% endfor %}
