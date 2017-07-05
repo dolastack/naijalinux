@@ -14,7 +14,7 @@ def index(request):
     display_list = Article.objects.articles_after(days=20)
     project_list = OpenSourceProject.objects.all()
     blogposts = BlogPost.objects.all()
-    videos = YoutubeVideo.objects.videos_after( days=30)
+    videos = YoutubeVideo.objects.videos_after( days=60)
 
 
     template = "feeds/feeds_list.html"
