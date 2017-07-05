@@ -4,13 +4,15 @@
 
 <div class="card bg-warning h-50" style="overflow-y:scroll;overflow-x:scroll">
 <h4 class="card-header bg-success" style="font-weight: bold; text-align: center;">News</h4>
-  <div class="conatiner">
+
       {% for entry in rows %}
+      <div class="card-link">
         <h3>{{entry.title | safe  }}</h3>
         <p>{{ entry.description | safe }}</p>
         <p>
           <a href="{{entry.url}}" target="_blank" class="btn btn-primary">Veiw Details</a>
         </p>
+      </div>
       {% endfor %}
 
     <div class="pagination">
@@ -28,7 +30,7 @@
       </span>
       </font></strong>
    </div>
- </div>
+
  </div><!--/.col-xs-12.col-sm-8-->
 
 
