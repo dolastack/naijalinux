@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'blogposts.apps.BlogpostsConfig',
     'account',
     'django.contrib.admin',
+    'clips.apps.ClipsConfig',
 ]
 
 MIDDLEWARE = [
