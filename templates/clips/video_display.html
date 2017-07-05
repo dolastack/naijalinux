@@ -1,5 +1,8 @@
-{% for video in videos %}
-     <h4>{{ video.title }}</h4>
 
-    <iframe  width="500" height="400" src="{{ video.embed_code }}" frameborder="0"></iframe>
-{% endfor %}
+  {% for video in videos %}
+    <div class="mx-auto">
+       <h4>{{ video.title }}</h4>
+
+      <iframe  width="500" height="400" src="{{ video.embed_code }}" frameborder="0"></iframe>
+    </div>
+  {% endfor %}
