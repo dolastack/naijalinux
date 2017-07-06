@@ -6,6 +6,7 @@
     <h3>Published {{ post.publish }} by {{ post.author }}</h3>
   </p>
   {{ post.body | safe }}
+</div>
 
   {% with comments.count as total_comments %}
       <h2>{{ total_comments  }} comment{{ total_comments|pluralize}}</h2>
@@ -34,5 +35,5 @@
       </p>
     </form>
   {% endif %}
-</div>
+
 {% endblock content %}
