@@ -7,12 +7,10 @@
 <h3 class="card-header bg-success" style="font-weight: bold; text-align: center;">News</h3>
   <div class="container" style="overflow-y:scroll;overflow-x:scroll">
       {% for entry in rows %}
-      <p class="container-fluid">
+      <p class="card-text">
         <h3>{{entry.title | safe  }}</h3>
         {{ entry.description | safe }}
-
           <a href="{{entry.url}}" target="_blank" class="btn btn-primary">Veiw Details</a>
-    
       </p>
       {% endfor %}
 
