@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 <div class="container">
 {% block content %}
-  <h1 class="display-2" style="color: blue;">{{ post.title }}</h1>
-  <p>
-    <h3>Published {{ post.publish }} by {{ post.author }}</h3>
-  </p>
-  {{ post.body | safe }}
+  <h1 class="display-3" style="color: blue;">{{ post.title }}</h1>
+  <p><h3>Published {{ post.publish }} by {{ post.author }}</h3></p>
+  <p>{{ post.body | safe }}</p>
 </div>
 
   {% with comments.count as total_comments %}
