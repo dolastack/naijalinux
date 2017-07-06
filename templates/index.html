@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
         <div class="col-md-8"> <!-- col-8 -->
-
           <div class="card ">
              <div class="card-block">
                <h3 class="card-header bg-success" style="font-weight: bold; text-align: center">Goals of this Community</h3>
@@ -34,12 +33,9 @@
         </div>
       </div>
 
-          <div class="card mt-3" >
-            <h2 class="card-header bg-success" style="font-weight: bold; text-align: center">Articles by fellow Nigerians</h2>
-              <div class="container">
+
                 {% include "blogposts/blog_display.html" %}
-              </div>
-          </div>
+
           <div class="card mt-3" >
             <h2 class="card-header bg-success" style="font-weight: bold; text-align: center">Videos by Fellow Nigerians</h2>
               <div class="container">
