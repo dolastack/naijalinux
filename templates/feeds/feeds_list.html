@@ -7,9 +7,11 @@
 
       {% for entry in rows %}
       <div class="container-fluid">
-        <h3>{{entry.title | safe  }}</h3>
-        {{ entry.description | safe }}
+        <p>
+          <h3>{{entry.title | safe  }}</h3>
+          {{ entry.description | safe }}
           <a href="{{entry.url}}" target="_blank" class="btn btn-primary">Veiw Details</a>
+        </p>
       </div>
       {% endfor %}
 
