@@ -10,6 +10,9 @@ from blogposts.models import BlogPost
 from clips.models import YoutubeVideo
 
 # Create your views here.
+def about(request):
+    return render(request, 'about.html', {} )
+    
 def index(request):
     display_list = Article.objects.articles_after(days=20)
     project_list = OpenSourceProject.objects.all()
