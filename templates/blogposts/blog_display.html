@@ -1,13 +1,12 @@
 <div class="card mt-3" >
  <h2 class="card-header bg-success" style="font-weight: bold; text-align: center">Articles by fellow Nigerians</h2>
-
     {% for post in blogposts %}
       <div class="container-fluid">
         <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
           <p class="date">
             Published {{ post.publish }} by {{ post.author }}
           </p>
-        <pre>{{ post.summary |safe }}</pre>
+        <p>{{ post.summary |safe }}</p>
       </div>
     {% endfor %}
 </div>
