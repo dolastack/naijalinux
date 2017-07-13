@@ -1,0 +1,12 @@
+https://www.linux.com/feeds
+
+
+youtube
+Go to the YouTube channel you want to track
+View the page’s source code
+Look for the following text: channel-external-id
+Get the value for that element (it’ll look something like UCBcRF18a7Qf58cCRy5xuWwQ
+Replace that value into this URL:
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBcRF18a7Qf58cCRy5xuWwQ
+
+https://www.youtube.com/feeds/videos.xml? + channel-external-id
