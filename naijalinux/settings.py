@@ -89,7 +89,10 @@ DATABASES = {
         'USER': 'dola',
         'PASSWORD' : 'Lum1nou4',
         'HOST': 'localhost',
-        'PORT': ''
+        'PORT': '',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
 
