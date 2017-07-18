@@ -81,7 +81,7 @@ def save_video(feedData, video_feed):
         video.save()
 
 ##up date youtube feeds every 7 minutes
-#@periodic_task(run_every=(crontab(minute="*/7")))
+@periodic_task(run_every=(crontab(minute="*/7")))
 def youtube_feed_update():
     """background task to get update from feed """
     FEED_LIST = YoutubeFeed.objects.all()
