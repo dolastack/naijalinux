@@ -2,8 +2,8 @@
 {% block content %}
         <div class="col-md-8"> <!-- col-8 -->
           <div class="card ">
-             <div class="card-block">
-               <h3 class="card-header bg-success" style="font-weight: bold; text-align: center">Goals of this Community</h3>
+             <h3 class="card-header bg-warning" style="font-weight: bold; text-align: center">Goals of this Community</h3>
+               <div class="card-block">
                 <h5 style="color: red;">To promote use of Open source projects in Nigeria</h5>
                 <h5 style="color: red;">To organize Open source conferences</h5>
                 <h5 style="color: red;">To encourage use of Linux OS in Nigerian Universities</h5>
@@ -11,18 +11,18 @@
         </div>
 
           <div class="card mt-3" style="overflow-y:hidden;overflow-x:scroll">
-             <div class="card-block">
-               <h3 class="card-header bg-success" style="font-weight: bold; text-align: center">Popular Open source Projects</h3>
-
-              {% for entry in project_list %}
+              <h3 class="card-header bg-warning" style="font-weight: bold; text-align: center">Popular Open source Projects</h3>
+               <div class="card-block">
+                 {% for entry in project_list %}
                 <a href="{{ entry.url }}" class="card-link">{{ entry.name }} </a>
               {% endfor %}
             </div>
         </div>
 
       <div class="card mt-3" style="overflow-y:hidden;overflow-x:scroll">
+
+          <h3 class="card-header bg-warning" style="font-weight: bold; text-align: center">Popular Linux Distros</h3>
            <div class="card-block">
-          <h3 class="card-header bg-success" style="font-weight: bold; text-align: center">Popular Linux Distros</h3>
               <a href="https://www.centos.org/" class="card-link">Centos</a>
               <a href="https://getfedora.org/" class="card-link">Fedora</a>
               <a href="https://www.ubuntu.com/" class="card-link">Ubuntu</a>
@@ -36,7 +36,7 @@
       {% include "blogposts/blog_display.html" %}
 
           <div class="card mt-3" >
-            <h2 class="card-header bg-success" style="font-weight: bold; text-align: center">Videos by Fellow Nigerians</h2>
+            <h2 class="card-header bg-warning" style="font-weight: bold; text-align: center">Videos by Fellow Nigerians</h2>
               <div class="container">
                 {% include "clips/video_display.html" %}
               </div>
