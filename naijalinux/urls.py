@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from feeds.views import about
+from feeds.views import about, index
 
 urlpatterns = [
     url(r'^account/', include('account.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^blogposts/', include('blogposts.urls', namespace='blogposts', app_name='blogposts')),
     url(r'^about', about, name='about' ),
+    url(r'^$', index, name='index'  ),
     url(r'^', include('feeds.urls') )
 ]

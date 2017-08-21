@@ -2,8 +2,10 @@
 {% block title %}Create an account{% endblock title %}
 
 {% block content %}
-  <h1>Create an account</h1>
-  <p>Please, sign up using the following form:</p>
+  <p>
+    <h5>Create an account</h5>
+    <h5>Please, sign up using the following form:</h5>
+  </p>
   <form action="." method="post">
     {{ user_form.as_p}}
     {% csrf_token %}
