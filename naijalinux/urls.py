@@ -20,6 +20,7 @@ from feeds.views import about, index
 
 urlpatterns = [
     url(r'^account/', include('account.urls')),
+    url('social-auth/', include('social_django.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
     url(r'^blogposts/', include('blogposts.urls', namespace='blogposts', app_name='blogposts')),
     url(r'^about', about, name='about' ),

@@ -26,7 +26,7 @@ SECRET_KEY = '6+jo08q-h4gvg4i3_iz5y$fg$27w(a7^&ugebs7*zsdleczbr4'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','10.0.0.150', '34.212.51.196','54.212.200.82',
-                 '54.203.113.77', 'naijalinuxusers.org']
+                 '54.203.113.77', 'www.naijalinuxusers.org', 'naijalinuxusers.org', 'naijanix' , 'www.naijanix.com']
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'account',
     'django.contrib.admin',
     'clips.apps.ClipsConfig',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                 'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -162,3 +165,14 @@ LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOpenId',
+    'social_core.backends.google.GoogleOAuth2',
+)
+
+
+SOCIAL_AUTH_FACEBOOK_KEY = '132305167384067'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'c2228e01be2decf30c6a721dc81abd5c'
